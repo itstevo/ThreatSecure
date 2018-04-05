@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/textview"
+        android:textStyle="bold"
+        tools:text="Threat Levels "
+        tools:textAlignment="center"
+        tools:textSize="24sp" />
+
+    <VideoView
+        android:id="@+id/videoView2"
+        android:layout_width="match_parent"
+        android:layout_height="59dp" />
+
+    <TextView
+        android:id="@+id/weaponText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/textview"
+        android:textSize="24sp"
+        tools:text='Weapon Type : "insert from database here" ' />
+
+    <ProgressBar
+        android:id="@+id/distanceFromThreatBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@android:dimen/app_icon_size" />
+
+    <TextView
+        android:id="@+id/distanceFromThreatText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/textview"
+        android:textSize="18sp"
+        tools:text='Distance From Threat: "insert from database here"' />
+
+</LinearLayout>

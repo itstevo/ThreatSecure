@@ -88,7 +88,6 @@ public class ToDoActivity extends Activity {
 
         // Initialize the progress bar
         mProgressBar.setVisibility(ProgressBar.GONE);
-
         try {
             // Create the Mobile Service Client instance, using the provided
 
@@ -105,6 +104,9 @@ public class ToDoActivity extends Activity {
                     client.setReadTimeout(20, TimeUnit.SECONDS);
                     client.setWriteTimeout(20, TimeUnit.SECONDS);
                     return client;
+
+
+
                 }
             });
 
@@ -127,6 +129,9 @@ public class ToDoActivity extends Activity {
 
             // Load the items from the Mobile Service
             refreshItemsFromTable();
+
+            //AzureServiceAdapter functionality
+
 
         } catch (MalformedURLException e) {
             createAndShowDialog(new Exception("There was an error creating the Mobile Service. Verify the URL"), "Error");

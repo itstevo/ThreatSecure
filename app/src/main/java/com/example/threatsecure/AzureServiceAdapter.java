@@ -1,4 +1,4 @@
-package com.example.appname.services;
+package com.example.threatsecure;
 
 import android.content.Context;
 import com.microsoft.windowsazure.mobileservices.*;
@@ -16,9 +16,13 @@ public class AzureServiceAdapter {
         mClient = new MobileServiceClient(mMobileBackendUrl, mContext);
     }
 
-    public static void Initialize(Context context) throws MalformedURLException {
+    public static void Initialize(Context context)  {
         if (mInstance == null) {
-            mInstance = new AzureServiceAdapter(context);
+            try {
+                mInstance = new AzureServiceAdapter(context);
+            } catch (MalformedURLException e) {
+                e.printStackTrace();
+            }
         } else {
             throw new IllegalStateException("AzureServiceAdapter is already initialized");
         }
